@@ -1,0 +1,96 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[remotes.origin]
+auto-track-bookmarks = "*"
+
+[signing]
+behavior = "own"
+backend = "ssh"
+key = "~/.ssh/id_rsa.pub"
+
+[ui]
+default-command = "status"
+
+[aliases]
+pre-commit = ["util", "exec", "--", "bash", "-c", """
+#!/usr/bin/env bash
+set -euo pipefail
+EMPTY=$(jj log --no-graph -r @ -T 'empty')
+if [ "$EMPTY" = "false" ]
+then
+jj new
+fi
+FROM=$(jj log --no-graph -r "fork_point(trunk() | @)" -T "commit_id")
+TO=$(jj log --no-graph -r "@" -T "commit_id")
+pre-commit run --from="$FROM" --to="$TO" "$@"
+""", ""]
+
+squash-empty = [
+  "squash",
+  "--from",
+  "heads(::@ & ~description(exact:''))..@",
+  "--to",
+  "heads(::@ & ~description(exact:''))",
+]
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+log-branch = ["log", "-r", "branch"]
+latest-bookmarks = [
+  "log",
+  "-r",
+  "(bookmarks() & mine()) | trunk()",
+  "--no-graph",
+  "--limit",
+  "15",
+  "-T",
+  "log_bookmarks",
+]
+
+[revset-aliases]
+branch = "fork_point(trunk() | @)..@"
+
+[templates]
+draft_commit_description = '''
+concat(
+  coalesce(description, default_commit_description, "\n"),
+  "JJ: ignore-rest\n",
+  surround(
+    "Bookmarks:\n", "\n\n",
+    indent("    ",
+      self.parents().filter(|c| !c.immutable() && c.bookmarks().len() > 0).map(|c| c.bookmarks().join(", ")).join("\n")
+    ),
+  ),
+  surround(
+    "Diff:\n", "\n",
+    indent("    ", diff.stat(72)),
+  ),
+  surround(
+    "Commits:\n", "\n",
+    indent("    ",
+      self.parents().filter(|c| c.contained_in("branch")).map(|c| separate("  ", c.description().first_line(), surround("[", "]", c.bookmarks().join(", ")))).join("\n"),
+    ),
+  ),
+)
+'''
+
+[template-aliases]
+log_bookmarks = '''
+if(root,
+  format_root_commit(self),
+  label(if(current_working_copy, "working_copy"),
+    concat(
+      separate(" ",
+        format_short_change_id_with_hidden_and_divergent_info(self),
+        format_timestamp(commit_timestamp(self)),
+        bookmarks,
+        tags,
+        working_copies,
+        format_short_commit_id(commit_id),
+        if(conflict, label("conflict", "conflict")),
+        if(config("ui.show-cryptographic-signatures").as_boolean(),
+          format_short_cryptographic_signature(signature)),
+        if(empty, label("empty", "(empty)")),
+      ) ++ "\n",
+    ),
+  )
+)
+'''

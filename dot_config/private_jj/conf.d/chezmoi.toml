@@ -1,0 +1,6 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+--when.repositories = ["~/.local/share/chezmoi"]
+[user]
+    name = "Alexandre Trufanow"
+    email = "git@minago.org"

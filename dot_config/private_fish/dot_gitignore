@@ -1,0 +1,31 @@
+.DS_Store
+fish_variables
+
+# jorgebucaran/fisher
+functions/fisher.fish
+completions/fisher.fish
+
+# jorgebucaran/hydro
+functions/fish_mode_prompt.fish
+functions/fish_prompt.fish
+conf.d/hydro.fish
+
+# jethrokuan/z
+functions/__z_*
+functions/__z.fish
+conf.d/z.fish
+
+# IlanCosman/tide@v6
+completions/tide.fish
+conf.d/_tide_init.fish
+functions/tide/*
+functions/_tide_*
+!functions/_tide_item_jj.fish
+!functions/_tide_item_git.fish
+functions/tide.fish
+
+# fisher install jorgebucaran/nvm.fish
+completions/nvm.fish
+conf.d/nvm.fish
+functions/_nvm_*
+functions/nvm.fish

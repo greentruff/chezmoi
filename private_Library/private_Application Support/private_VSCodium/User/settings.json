@@ -1,0 +1,6 @@
+{
+    "nix.enableLanguageServer": true,
+    "terminal.integrated.initialHint": false,
+    "claudeCode.preferredLocation": "panel",
+    "git.enabled": false
+}
