@@ -9,7 +9,7 @@ function fish_greeting
     end
 
     set hm_lock "$HOME/.config/home-manager/flake.lock"
-    if test -e $hm_lock 
+    if type -q home-manager && test -e $hm_lock 
         set lock_epoch (stat -c %Y $hm_lock)
         set now (date +%s)
         set age_days (math "($now - $lock_epoch) / 86400")

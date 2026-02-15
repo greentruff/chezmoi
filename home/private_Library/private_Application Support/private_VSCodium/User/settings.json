@@ -1,6 +1,10 @@
 {
+    "claudeCode.preferredLocation": "panel",
+    "editor.formatOnSave": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.minimap.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "git.enabled": false,
     "nix.enableLanguageServer": true,
     "terminal.integrated.initialHint": false,
-    "claudeCode.preferredLocation": "panel",
-    "git.enabled": false
 }
