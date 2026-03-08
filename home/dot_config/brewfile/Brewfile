@@ -1,0 +1,37 @@
+# Cli tools
+brew "bat"              # less
+brew "btop"             # top
+brew "eza"              # ls
+brew "fd"               # find
+brew "fzf"              # fuzzy finder
+brew "glow"             # pretty markdown
+brew "just"             # make
+brew "jq"               # json manipulation
+brew "ripgrep"          # silver surfer
+brew "rnr"              # renamer
+brew "tealdeer"         # tldr
+brew "uutils-coreutils" # coreutils
+brew "wget"
+
+brew "chezmoi" # config sync
+
+# editors
+brew "neovim"
+cask "vscodium"
+
+cargo "bacon"           # watcher
+cargo "cargo-nextest"   # better test runner
+cargo "samply"          # rust profiling
+
+# code
+brew "fnm" # node manager
+brew "uv"
+
+# shells
+brew "bash"
+brew "fish"
+
+# vcs
+brew "git"
+brew "jujutsu"
+
