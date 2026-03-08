@@ -7,6 +7,8 @@ set -a tool_paths $HOME/.juliaup/bin
 set -a tool_paths $HOME/.nix-profile/bin
 if type -q brew
     set -a tool_paths $(brew --prefix)/opt/llvm/bin
+    # coreutils without prefix
+    set -a tool_paths $(brew --prefix)/opt/uutils-coreutils/libexec/uubin
 end
 set -a tool_paths $HOME/.bun/bin
 

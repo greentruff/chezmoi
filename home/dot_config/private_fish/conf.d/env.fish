@@ -4,11 +4,10 @@ set -gx LANG 'en_US.UTF-8'
 set -g hydro_color_pwd brblue
 set -g hydro_color_pwd green
 
-
 if type -q nvim
-    set -gx EDITOR 'nvim'
+    set -gx EDITOR nvim
 else if type -q vi
-    set -gx EDITOR 'vi'
+    set -gx EDITOR vi
 end
 set -gx VISUAL $EDITOR
 
@@ -16,6 +15,10 @@ if type -q bat
     set -gx BAT_STYLE plain
     #  Use for manpages
     set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+end
+
+if type -q fnm
+    fnm env --use-on-cd --version-file-strategy=recursive --shell fish | source
 end
 
 if test -d /opt/homebrew/opt/imagemagick
