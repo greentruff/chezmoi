@@ -1,0 +1,6 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+--when.repositories = ["~/tsuga"]
+[user]
+name = "Alexandre Trufanow"
+email = "truff@tsuga.com"

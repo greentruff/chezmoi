@@ -19,6 +19,10 @@ brew "chezmoi" # config sync
 brew "neovim"
 cask "vscodium"
 
+# dev tooling
+cargo "difftastic"
+
+# rust tooling
 cargo "bacon"           # watcher
 cargo "cargo-nextest"   # better test runner
 cargo "samply"          # rust profiling
@@ -26,6 +30,9 @@ cargo "samply"          # rust profiling
 # code
 brew "fnm" # node manager
 brew "uv"
+
+# terminal
+cask "wezterm@nightly"
 
 # shells
 brew "bash"
