@@ -34,6 +34,10 @@ latest-bookmarks = [
   "log_bookmarks",
 ]
 
+[revsets]
+# Default log: only trunk head + my changes not in trunk
+log = 'present(@) | ancestors(immutable_heads().., 2)  & mine() | trunk()'
+
 [revset-aliases]
 branch = "fork_point(trunk() | @)..@"
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'

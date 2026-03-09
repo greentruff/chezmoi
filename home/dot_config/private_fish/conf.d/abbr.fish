@@ -33,7 +33,20 @@ abbr -a jn  'jj new'
 abbr -a jpn 'jj git push --allow-new'
 abbr -a jps 'jj git push'
 abbr -a jqe 'jj squash-empty'
+abbr -a jr 'jj rebase'
 abbr -a jrm 'jj rebase --skip-emptied -d main -b'
 
 abbr -a bb 'jj log-branch'
 abbr -a bl 'jj latest-bookmarks'
+
+# kubectl
+abbr -a k 'kubectl'
+abbr -a kg 'kubectl get'
+abbr -a kgp 'kubectl get pods'
+abbr -a kgd 'kubectl get deploy'
+abbr -a kgs 'kubectl get sts'
+
+abbr -a kd 'kubectl describe'
+
+abbr -a kx kubectx
+abbr -a ks kubens

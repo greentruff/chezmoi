@@ -4,8 +4,6 @@
     "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.minimap.enabled": false,
     "files.autoSave": "onFocusChange",
-    "nix.enableLanguageServer": true,
-    "terminal.integrated.initialHint": false,
     "json.schemaDownload.trustedDomains": {
         "https://schemastore.azurewebsites.net/": true,
         "https://raw.githubusercontent.com/": true,
@@ -14,4 +12,37 @@
         "https://json-schema.org/": true,
         "https://docs.renovatebot.com/renovate-schema.json": true
     },
+    "git.enabled": false,
+    "nix.enableLanguageServer": true,
+    "terminal.integrated.initialHint": false,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "c",
+                "d"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "<C-o>"
+            ],
+            "commands": [
+                "workbench.action.navigateBack"
+            ]
+        },
+        {
+            "before": [
+                "<C-i>"
+            ],
+            "commands": [
+                "workbench.action.navigateForward"
+            ]
+        },
+    ],
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

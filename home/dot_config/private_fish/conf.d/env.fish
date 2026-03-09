@@ -4,10 +4,11 @@ set -gx LANG 'en_US.UTF-8'
 set -g hydro_color_pwd brblue
 set -g hydro_color_pwd green
 
+
 if type -q nvim
-    set -gx EDITOR nvim
+    set -gx EDITOR 'nvim'
 else if type -q vi
-    set -gx EDITOR vi
+    set -gx EDITOR 'vi'
 end
 set -gx VISUAL $EDITOR
 

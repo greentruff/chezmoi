@@ -1,5 +1,3 @@
-if test -d /opt/homebrew/bin
-    fish_add_path -g /opt/homebrew/bin
-    brew shellenv | source
+if type -q brew
+    eval (brew shellenv)
 end
-
