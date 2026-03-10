@@ -12,6 +12,7 @@ brew "rnr"              # renamer
 brew "tealdeer"         # tldr
 brew "uutils-coreutils" # coreutils
 brew "wget"
+brew "yq"               # yaml manipulation
 
 brew "chezmoi" # config sync
 
@@ -21,18 +22,22 @@ cask "vscodium"
 
 # dev tooling
 cargo "difftastic"
+cargo "tilt"
 
 # rust tooling
 cargo "bacon"           # watcher
 cargo "cargo-nextest"   # better test runner
 cargo "samply"          # rust profiling
+cargo "wasm-pack"
 
 # code
 brew "fnm" # node manager
 brew "uv"
 
 # terminal
+cask "iterm2"
 cask "wezterm@nightly"
+brew "zellij"
 
 # shells
 brew "bash"
@@ -40,5 +45,13 @@ brew "fish"
 
 # vcs
 brew "git"
+brew "gh"
 brew "jujutsu"
 
+# cloud
+brew "awscli"
+cask "gcloud-cli"
+brew "kubernetes-cli"
+brew "k9s"
+brew "kubectx"
+brew "pulumi"

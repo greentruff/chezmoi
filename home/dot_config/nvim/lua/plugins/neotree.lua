@@ -19,7 +19,6 @@ return {
       "<leader>E",
       function()
         require("neo-tree.command").execute({
-          position = "float",
           reveal = true,
           toggle = true,
           dir = vim.uv.cwd(),
