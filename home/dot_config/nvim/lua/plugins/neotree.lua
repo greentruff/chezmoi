@@ -19,6 +19,7 @@ return {
       "<leader>E",
       function()
         require("neo-tree.command").execute({
+          position = "left",
           reveal = true,
           toggle = true,
           dir = vim.uv.cwd(),

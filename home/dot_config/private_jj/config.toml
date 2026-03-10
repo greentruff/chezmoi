@@ -13,6 +13,20 @@ default-command = "status"
 [ui.movement]
 edit = true
 
+[merge-tools.diffconflicts]
+program = "nvim"
+merge-args = [
+  "-c",
+  "let g:jj_diffconflicts_marker_length=$marker_length",
+  "-c",
+  "JJDiffConflicts!",
+  "$output",
+  "$base",
+  "$left",
+  "$right",
+]
+merge-tool-edits-conflict-markers = true
+
 [aliases]
 squash-empty = [
   "squash",
