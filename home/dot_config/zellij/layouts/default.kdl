@@ -1,0 +1,57 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zjstatus" {
+                format_left   "{tabs}"
+                format_center ""
+                format_right  "{pipe_zjstatus_hints}{mode}#[bg=#84a0c6,fg=#1e2132,bold] [{session}]"
+                format_space  ""
+
+                border_enabled  "false"
+                border_char     "─"
+                border_format   "#[fg=#6b7089]{char}"
+                border_position "top"
+
+                hide_frame_for_single_pane "true"
+
+                mode_locked      "#[bg=#6b7089,fg=#1e2132,bold] LOCK "
+                mode_normal      "#[bg=#b4be82,fg=#1e2132,bold] NORMAL "
+                mode_resize      "#[bg=#e27878,fg=#1e2132,bold] RESIZE "
+                mode_pane        "#[bg=#89b8c2,fg=#1e2132,bold] PANE "
+                mode_move        "#[bg=#a093c7,fg=#1e2132,bold] MOVE "
+                mode_tab         "#[bg=#a093c7,fg=#1e2132,bold] TAB "
+                mode_scroll      "#[bg=#e2a578,fg=#1e2132,bold] SCROLL "
+                mode_search      "#[bg=#e2a578,fg=#1e2132,bold] SEARCH "
+                mode_entersearch "#[bg=#e2a578,fg=#1e2132,bold] SEARCH "
+                mode_renametab   "#[bg=#a093c7,fg=#1e2132,bold] RENAME TAB "
+                mode_renamepane  "#[bg=#a093c7,fg=#1e2132,bold] RENAME PANE "
+                mode_session     "#[bg=#e27878,fg=#1e2132,bold] SESSION "
+                mode_tmux        "#[bg=#e2a578,fg=#1e2132,bold] TMUX "
+
+                tab_active              "#[bg=#84a0c6,fg=#1e2132,bold] {index} {name} "
+                tab_active_fullscreen   "#[bg=#84a0c6,fg=#1e2132,bold] {fullscreen_indicator} {index} {name} "
+                tab_active_sync         "#[bg=#84a0c6,fg=#1e2132,bold] {sync_indicator} {index} {name} "
+
+                tab_normal              "#[fg=#6b7089,bold] {index} {name} "
+                tab_normal_fullscreen   "#[fg=#6b7089,bold] {fullscreen_indicator} {index} {name} "
+                tab_normal_sync         "#[fg=#6b7089,bold] {sync_indicator} {index} {name} "
+
+                tab_separator " "
+
+                tab_sync_indicator       ""
+                tab_fullscreen_indicator ""
+                tab_floating_indicator   ""
+
+                tab_rename              "#[bg=#a093c7,fg=#1e2132,bold] {index} {name} {floating_indicator} "
+
+                tab_display_count         "9"
+                tab_truncate_start_format "#[fg=#e2a578]  +{count}  "
+                tab_truncate_end_format   "#[fg=#e2a578]   +{count} "
+
+                pipe_zjstatus_hints_format "#[bg=#84a0c6,fg=#1e2132,bold]{output}"
+            }
+        }
+        children
+    }
+    tab name=""
+}
