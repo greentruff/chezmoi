@@ -19,6 +19,8 @@ merge-args = [
   "-c",
   "let g:jj_diffconflicts_marker_length=$marker_length",
   "-c",
+  "let b:autoformat = v:false",
+  "-c",
   "JJDiffConflicts!",
   "$output",
   "$base",
