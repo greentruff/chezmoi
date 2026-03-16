@@ -1,5 +1,11 @@
 return {
   {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+    },
+  },
+  {
     "nicolasgb/jj.nvim",
     dependencies = { "folke/snacks.nvim", "esmuellert/codediff.nvim" },
     opts = {
