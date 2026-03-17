@@ -271,7 +271,7 @@ load_plugins {
 web_client {
     font "monospace"
 }
-theme "iceberg-dark"
+theme "tokio-night-storm"
 default_mode "locked"
 pane_frames false
 default_layout "default"
