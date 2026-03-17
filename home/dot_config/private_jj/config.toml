@@ -13,6 +13,9 @@ default-command = "status"
 [ui.movement]
 edit = true
 
+[snapshot]
+auto-update-stale = true
+
 [merge-tools.diffconflicts]
 program = "nvim"
 merge-args = [
