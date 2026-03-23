@@ -3,7 +3,7 @@ function _tide_item_jj
         return 1
     end
 
-    set jj_status (jj log -r@ -n1 --no-graph --color always -T '
+    set jj_status (jj log -r@ -n1 --no-graph --ignore-working-copy --color always -T '
     separate("|",
         coalesce(
             bookmarks.join(" "),

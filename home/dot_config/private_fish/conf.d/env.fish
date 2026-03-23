@@ -19,7 +19,7 @@ if type -q bat
 end
 
 if type -q fnm
-    fnm env --use-on-cd --version-file-strategy=recursive --shell fish | source
+    fnm env --use-on-cd --version-file-strategy=recursive --log-level=quiet --shell fish | source
 end
 
 if test -d /opt/homebrew/opt/imagemagick
