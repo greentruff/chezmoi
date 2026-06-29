@@ -11,6 +11,9 @@ if type -q brew
     set -a tool_paths $(brew --prefix)/opt/uutils-coreutils/libexec/uubin
 end
 set -a tool_paths $HOME/.bun/bin
+set -a tool_paths $HOME/.opencode/bin
+set -a tool_paths $HOME/.git-ai/bin
+set -a tool_paths $HOME/.cubic/bin
 
 set home_paths
 set -a home_paths $HOME/.local/bin
