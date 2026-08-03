@@ -1,6 +1,8 @@
 .DS_Store
 fish_variables
 
+conf.d/secrets.fish
+
 # jorgebucaran/fisher
 functions/fisher.fish
 completions/fisher.fish
