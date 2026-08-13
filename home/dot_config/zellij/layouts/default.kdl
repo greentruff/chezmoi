@@ -12,7 +12,7 @@ layout {
                 border_format   "#[fg=#6b7089]{char}"
                 border_position "top"
 
-                hide_frame_for_single_pane "true"
+                hide_frame_for_single_pane "false"
 
                 mode_locked      "#[bg=#6b7089,fg=#1e2132,bold] LOCK "
                 mode_normal      "#[bg=#b4be82,fg=#1e2132,bold] NORMAL "
