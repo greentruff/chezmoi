@@ -33,4 +33,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.renderWhitespace": "none",
+  "workbench.colorTheme": "Dark Modern",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
