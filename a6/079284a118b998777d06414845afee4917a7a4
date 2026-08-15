@@ -1,0 +1,14 @@
+home/dot_config/private_jj/config.toml
+  h_f28c8df349cf46 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "a6079284a118b998777d06414845afee4917a7a4",
+  "prompts": {},
+  "humans": {
+    "h_f28c8df349cf46": {
+      "author": "Alexandre Trufanow <git@minago.org>"
+    }
+  }
+}
