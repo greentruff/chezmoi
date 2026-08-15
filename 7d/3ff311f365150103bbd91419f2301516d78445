@@ -1,0 +1,16 @@
+home/dot_config/private_fish/conf.d/path.fish
+  h_f28c8df349cf46 17-19
+"home/private_Library/private_Application Support/private_VSCodium/User/settings.json"
+  h_f28c8df349cf46 36-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "7d3ff311f365150103bbd91419f2301516d78445",
+  "prompts": {},
+  "humans": {
+    "h_f28c8df349cf46": {
+      "author": "Alexandre Trufanow <git@minago.org>"
+    }
+  }
+}
