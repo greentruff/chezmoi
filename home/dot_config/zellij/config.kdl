@@ -170,6 +170,9 @@ keybinds clear-defaults=true {
 
         bind "Alt [" { MoveFocusOrTab "left"; }
         bind "Alt ]" { MoveFocusOrTab "right"; }
+
+        bind "Alt i" { MoveTab "left"; }
+        bind "Alt o" { MoveTab "right"; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl q" { Quit; }
