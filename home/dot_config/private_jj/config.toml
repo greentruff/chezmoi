@@ -9,7 +9,7 @@ backend = "ssh"
 
 [ui]
 default-command = "status"
-diff-formatter = "diffconflicts"
+merge-editor = "diffconflicts"
 
 [ui.movement]
 edit = true
