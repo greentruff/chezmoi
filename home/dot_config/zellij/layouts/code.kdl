@@ -54,8 +54,8 @@ layout {
         children
     }
 
-    tab name="claude" {
-        pane command="claude"
+    tab name="ai" {
+        pane command="agent"
     }
     tab name="nvim" focus=true {
         pane command="nvim"
