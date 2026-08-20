@@ -1,0 +1,18 @@
+home/dot_config/private_fish/dot_gitignore
+  h_f28c8df349cf46 26
+home/dot_config/private_fish/functions/_tide_item_vcs.fish
+  h_f28c8df349cf46 1-3,5
+home/dot_config/private_fish/functions/refresh_tide.fish
+  h_f28c8df349cf46 3-4,15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "9e47bd6a8c3bd338eee7c9f94d45996a1ee58bc4",
+  "prompts": {},
+  "humans": {
+    "h_f28c8df349cf46": {
+      "author": "Alexandre Trufanow <git@minago.org>"
+    }
+  }
+}
