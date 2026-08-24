@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "ae2f39bf4d3c7b339c6569c6834d403b70c06324",
+  "prompts": {},
+  "humans": {
+    "h_f28c8df349cf46": {
+      "author": "Alexandre Trufanow <git@minago.org>"
+    }
+  }
+}
