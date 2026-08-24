@@ -1,0 +1,14 @@
+home/dot_config/nvim/lua/plugins/cmp.lua
+  h_f28c8df349cf46 1-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "6da3905d6c8b99b5ac3241f0000f15faa2de5237",
+  "prompts": {},
+  "humans": {
+    "h_f28c8df349cf46": {
+      "author": "Alexandre Trufanow <git@minago.org>"
+    }
+  }
+}
