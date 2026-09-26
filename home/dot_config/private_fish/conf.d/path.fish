@@ -12,7 +12,7 @@ if type -q brew
 end
 set -a tool_paths $HOME/.bun/bin
 set -a tool_paths $HOME/.opencode/bin
-set -a tool_paths $HOME/.git-ai/bin
+set -a tool_paths $HOME/.opencode/bin
 set -a tool_paths $HOME/.cubic/bin
 if type -q ruby
     set -a tool_paths (ruby -e 'puts Gem.bindir')

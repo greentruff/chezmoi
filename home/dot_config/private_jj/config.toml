@@ -9,6 +9,7 @@ backend = "ssh"
 
 [ui]
 default-command = "status"
+diff-formatter = "difft"
 merge-editor = "diffconflicts"
 
 [ui.movement]
@@ -16,6 +17,9 @@ edit = true
 
 [snapshot]
 auto-update-stale = true
+
+[merge-tools.difft]
+merge-args = ["--color=always", "$left", "$right"]
 
 [merge-tools.diffconflicts]
 program = "nvim"
@@ -32,6 +36,13 @@ merge-args = [
   "$right",
 ]
 merge-tool-edits-conflict-markers = true
+
+[merge-tools.weave]
+program = "weave-driver"
+merge-args = ["$base", "$left", "$right", "-o", "$output", "-l", "$marker_length", "-p", "$path"]
+merge-conflict-exit-codes = [1]
+merge-tool-edits-conflict-markers = true
+conflict-marker-style = "git"
 
 [aliases]
 squash-empty = [
@@ -57,10 +68,12 @@ latest-bookmarks = [
 [revsets]
 # Default log: only trunk head + my changes not in trunk
 log = 'present(@) | ancestors(immutable_heads().., 2)  & mine() | trunk()'
+bookmark-advance-to = 'closest_pushable(@)'
 
 [revset-aliases]
-branch = "fork_point(trunk() | @)..@"
+branch = 'fork_point(trunk() | @)..@ | @::'
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 
 [templates]
 draft_commit_description = '''

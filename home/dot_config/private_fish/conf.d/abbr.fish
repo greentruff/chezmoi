@@ -1,5 +1,5 @@
-abbr -a vi 'nvim'
-abbr -a nv 'nvim'
+abbr -a vi nvim
+abbr -a nv nvim
 
 abbr -a less bat
 abbr -a cm chezmoi
@@ -22,7 +22,8 @@ abbr -a glb 'git last-branches'
 abbr -a gf 'git fetch'
 
 # jj
-abbr -a jb  'jj bookmark create -r @'
+abbr -a jb 'jj bookmark create -r @'
+abbr -a jba 'jj bookmark advance'
 abbr -a jbp 'jj bookmark create -r @-'
 abbr -a jc  'jj commit'
 abbr -a jd  'jj diff'
@@ -40,7 +41,7 @@ abbr -a bb 'jj log-branch'
 abbr -a bl 'jj latest-bookmarks'
 
 # kubectl
-abbr -a k 'kubectl'
+abbr -a k kubectl
 abbr -a kg 'kubectl get'
 abbr -a kgp 'kubectl get pods'
 abbr -a kgd 'kubectl get deploy'
