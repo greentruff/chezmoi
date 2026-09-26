@@ -157,6 +157,7 @@ keybinds clear-defaults=true {
 
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Alt n" { NewPane; }
+        bind "Alt N" { NewTab; }
 
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
@@ -279,5 +280,6 @@ web_client {
 theme "tokio-night-storm"
 default_mode "locked"
 pane_frames false
+stacked_pane_list false
 default_layout "default"
  
