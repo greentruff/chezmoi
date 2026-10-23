@@ -17,6 +17,7 @@ set -a tool_paths $HOME/.cubic/bin
 if type -q ruby
     set -a tool_paths (ruby -e 'puts Gem.bindir')
 end
+set -a tool_paths $HOME/.kx/bin
 
 set home_paths
 set -a home_paths $HOME/.local/bin
